@@ -1,4 +1,23 @@
-﻿# Noodle AWS Development Environment Platform
+# Noodle DevEnv Platform
+
+## 🏗️ Architecture Overview
+
+![Noodle DevEnv Platform Architecture](https://raw.githubusercontent.com/PhelelaniS1/Noodle-AWS-DevEnv/main/Gemini_Generated_Image_lof7lylof7lylof7.png)
+
+*Self-service, on-demand AWS infrastructure with serverless components*
+
+## 📋 Key Components
+- **Application Load Balancer**: Handles HTTP/HTTPS traffic
+- **ECS Fargate**: Serverless compute containers
+- **Aurora PostgreSQL**: Serverless database (0.5-2 ACU)
+- **AWS VPC**: 10.0.0.0/16 with public/private subnets
+- **CI/CD**: GitHub Actions with Terraform
+
+## 🚀 Quick Deployment
+```bash
+terraform init
+terraform plan
+terraform apply﻿# Noodle AWS Development Environment Platform
 
 A Terraform project that provisions a secure, production-like AWS environment with VPC, ECS Fargate, Application Load Balancer, and Aurora Serverless database.
 
