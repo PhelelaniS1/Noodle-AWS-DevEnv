@@ -1,25 +1,44 @@
-﻿# Noodle AWS Development Environment Platform
+# Noodle AWS Development Environment Platform
 
-A Terraform project that provisions a secure, production-like AWS environment with VPC, ECS Fargate, Application Load Balancer, and Aurora Serverless database.
+A Terraform-based platform for provisioning standardized, secure, and cost-effective AWS development environments.
 
-## Architecture
-- **VPC** with Public & Private Subnets
-- **NAT Gateway** for private subnet internet access
-- **Security Groups** with layered security (ALB-SG, App-SG)
-- **ECS Fargate Cluster** running NGINX container
-- **Application Load Balancer** as public entry point
-- **Aurora PostgreSQL (Serverless v2)** in private subnets
+## 🎯 Features
 
-## Usage
-1. Clone this repository
-2. Run `terraform init`
-3. Run `terraform plan`
-4. Run `terraform apply`
+- **Infrastructure as Code**: Complete AWS environment defined in Terraform
+- **Security by Design**: Layered security groups with least-privilege access
+- **Cost Optimized**: Single NAT gateway, Aurora Serverless scaling to zero
+- **Production Ready**: ECS Fargate with Container Insights enabled
+- **Automated**: GitHub Actions CI/CD pipeline
 
-## Outputs
-- Load Balancer DNS Name
-- ECS Cluster Name
-- Database Endpoint
+## 🏗️ Architecture
 
-## Cleanup
-Run `terraform destroy` to remove all resources.
+
+## 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/PhelelaniS1/Noodle-AWS-DevEnv.git
+
+# Initialize Terraform
+terraform init
+
+# Review deployment plan
+terraform plan -var-file="terraform.tfvars.example"
+
+# Deploy infrastructure
+terraform apply -var-file="terraform.tfvars.example"
+
+terraform destroy -var-file="terraform.tfvars.example"
+
+
+5. **Paste** it into the GitHub editor
+
+### **Step 3: Save**
+1. Scroll to the bottom
+2. Click **"Commit changes"** (green button)
+3. ✅ **DONE!**
+
+## 🔍 **Check the Result:**
+Refresh your GitHub page and you'll see the beautiful architecture diagram and all documentation!
+
+**No PowerShell, no commands, no confusion.** Just edit directly on GitHub. **Do this now - it takes 2 minutes!** 🚀
