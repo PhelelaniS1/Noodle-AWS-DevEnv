@@ -1,44 +1,31 @@
 # Noodle AWS Development Environment Platform
 
-A Terraform-based platform for provisioning standardized, secure, and cost-effective AWS development environments.
+A Terraform platform for AWS development environments.
 
-## 🎯 Features
+## Features
+- Infrastructure as Code with Terraform
+- Secure VPC with public/private subnets
+- ECS Fargate for container orchestration
+- Cost-optimized architecture
+- GitHub Actions CI/CD
 
-- **Infrastructure as Code**: Complete AWS environment defined in Terraform
-- **Security by Design**: Layered security groups with least-privilege access
-- **Cost Optimized**: Single NAT gateway, Aurora Serverless scaling to zero
-- **Production Ready**: ECS Fargate with Container Insights enabled
-- **Automated**: GitHub Actions CI/CD pipeline
-
-## 🏗️ Architecture
-
-
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-# Clone repository
+# 1. Clone repository
 git clone https://github.com/PhelelaniS1/Noodle-AWS-DevEnv.git
+cd Noodle-AWS-DevEnv
 
-# Initialize Terraform
+# 2. Set AWS credentials
+export AWS_ACCESS_KEY_ID="your-key"
+export AWS_SECRET_ACCESS_KEY="your-secret"
+export AWS_DEFAULT_REGION="us-east-1"
+
+# 3. Initialize Terraform
 terraform init
 
-# Review deployment plan
+# 4. Review plan
 terraform plan -var-file="terraform.tfvars.example"
 
-# Deploy infrastructure
+# 5. Deploy
 terraform apply -var-file="terraform.tfvars.example"
-
-terraform destroy -var-file="terraform.tfvars.example"
-
-
-5. **Paste** it into the GitHub editor
-
-### **Step 3: Save**
-1. Scroll to the bottom
-2. Click **"Commit changes"** (green button)
-3. ✅ **DONE!**
-
-## 🔍 **Check the Result:**
-Refresh your GitHub page and you'll see the beautiful architecture diagram and all documentation!
-
-**No PowerShell, no commands, no confusion.** Just edit directly on GitHub. **Do this now - it takes 2 minutes!** 🚀
