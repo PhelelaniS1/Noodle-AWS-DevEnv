@@ -1,31 +1,34 @@
 # Noodle AWS Development Environment Platform
 
-A Terraform platform for AWS development environments.
+A Terraform-based platform for provisioning secure, production-ready AWS environments.
+
+## Overview
+This project creates a complete AWS environment with networking, container orchestration, and database services using Infrastructure as Code principles.
 
 ## Features
-- Infrastructure as Code with Terraform
-- Secure VPC with public/private subnets
-- ECS Fargate for container orchestration
-- Cost-optimized architecture
-- GitHub Actions CI/CD
+- **Infrastructure as Code** - Entire environment defined in Terraform
+- **Secure Architecture** - VPC with public/private subnets, layered security groups
+- **Cost Optimized** - Aurora Serverless scaling, single NAT gateway
+- **Production Ready** - ECS Fargate with monitoring, multi-AZ deployment
+- **Automated** - GitHub Actions CI/CD pipeline
 
 ## Quick Start
 
 ```bash
-# 1. Clone repository
+# Clone the repository
 git clone https://github.com/PhelelaniS1/Noodle-AWS-DevEnv.git
 cd Noodle-AWS-DevEnv
 
-# 2. Set AWS credentials
-export AWS_ACCESS_KEY_ID="your-key"
-export AWS_SECRET_ACCESS_KEY="your-secret"
+# Set AWS credentials
+export AWS_ACCESS_KEY_ID="your-access-key"
+export AWS_SECRET_ACCESS_KEY="your-secret-key"
 export AWS_DEFAULT_REGION="us-east-1"
 
-# 3. Initialize Terraform
+# Initialize Terraform
 terraform init
 
-# 4. Review plan
+# Review the deployment plan
 terraform plan -var-file="terraform.tfvars.example"
 
-# 5. Deploy
+# Deploy the infrastructure
 terraform apply -var-file="terraform.tfvars.example"
